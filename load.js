@@ -4,6 +4,7 @@ $(document).ready(function() {
         $('#desc').text(data['desc']);
         $('#image').attr('src',data['image']);
         $( '#map' ).attr( 'src', function ( i, val ) { return val; });
+        $('#info').attr('href',data['url']);
     });
 
     $('body').on('swipeleft',function(){
@@ -18,6 +19,7 @@ $(document).ready(function() {
             $('#desc').text(data['desc']);
             $('#image').attr('src',data['image']);
             $( '#map' ).attr( 'src', function ( i, val ) { return val; });
+            $('#info').attr('href',data['url']);
     });
 
     $('body').on('swiperight',function(){
@@ -32,6 +34,7 @@ $(document).ready(function() {
             $('#desc').text(data['desc']);
             $('#image').attr('src',data['image']);
             $( '#map' ).attr( 'src', function ( i, val ) { return val; });
+            $('#info').attr('href',data['url']);
         });
     });
 });
