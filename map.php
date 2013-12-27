@@ -40,7 +40,8 @@ if (!$lat) {
             var mapOptions = {
                 center: myLatlng,
                 zoom: 16,
-                disableDefaultUI: true,
+                scrollwheel: false,
+                draggable: false,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
             var map = new google.maps.Map(document.getElementById("map-canvas"),

@@ -4,10 +4,10 @@ include('yelp.php');
 include('yelp2.php');
 include('yelpbus.php');
 
-function getyelpall($lat,$long,$cat) {
+function getyelpall($lat,$long,$cat,$radius) {
 	$data = array();
-	$data[] = json_decode(getyelp($lat,$long,$cat),true);
-	$data[] = json_decode(getyelp2($lat,$long,$cat),true);
+	$data[] = json_decode(getyelp($lat,$long,$cat,$radius),true);
+	$data[] = json_decode(getyelp2($lat,$long,$cat,$radius),true);
 	$data = $data[0]['businesses'];
 	return $data;
 }

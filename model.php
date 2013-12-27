@@ -18,13 +18,16 @@ $long = $_SESSION['long'];
 $cat = $_SESSION['cat'];
 // $cat = 'cafe';
 $user = $_SESSION['user'];
+
+$radius = $_SESSION['radius'];
+
 // $user = 'test1';
 $refreshdata = $_SESSION['refresh'];
 
 if ($refreshdata) {
 	//GET DATA
-	$places = getyelpall($lat,$long,$cat);
-	$events = geteventful($lat,$long,$cat);
+	$places = getyelpall($lat,$long,$cat,$radius);
+	$events = geteventful($lat,$long,$cat,$radius);
 	//PARSE Data
 	//yelp
 	$yelp = parseyelp($places);
@@ -75,9 +78,15 @@ if ($eventful) {
 //pick top
 if ($eventful) {
 	$suggestion = topevent($yelp[0],$eventful[0]);
+	if ($suggestion['name'] == $_SESSION['suggestion']['name']) {
+		$suggestion = $yelp[1];
+	}
 	$_SESSION['suggestion'] = $suggestion;
 } else {
 	$suggestion = $yelp[0];
+	if ($suggestion['name'] == $_SESSION['suggestion']['name']) {
+		$suggestion = $yelp[1];
+	}
 	$_SESSION['suggestion'] = $suggestion;
 }
 //print

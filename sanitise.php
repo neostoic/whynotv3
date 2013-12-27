@@ -5,6 +5,8 @@ function sanitise($events,$userhistory) {
 		for ($j=0 ; $j<count($events) ; $j++) {
 			if ($events[$j]['name'] == $userhistory[$i]) {
 				unset($events[$j]);
+			} elseif (strpos($events[$j]['name'],'3 hours') !== false) {
+				unset($events[$j]);
 			}
 		}
 	}

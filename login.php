@@ -18,6 +18,12 @@ $cat = $_POST['cat'];
 $_SESSION['cat'] = $cat;
 $_SESSION['refresh'] = true;
 $place = $_POST['place'];
+if (!$place) {
+	$place = 'me';
+	$_SESSION['radius'] = 2000;
+} else {
+	$_SESSION['radius'] = 1000;
+}
 
 $sql = "INSERT INTO Users (User, Latitude, Longitude, Category, LookingIn) values ('$user','$lat','$long','$cat', '$place')";
 mysqli_query($con,$sql);

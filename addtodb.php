@@ -6,6 +6,7 @@ $suggestion = $_SESSION['suggestion'];
 $name = $suggestion['name'];
 $tags = $suggestion['tags'];
 $user = $_SESSION['user'];
+$image = $suggestion['image'];
 
 $json = $_POST;
 $choice = $json['choice'];
@@ -21,7 +22,7 @@ for ($i=0 ; $i<count($tags) ; $i++) {
 	mysqli_query($con,$updatetagssql);
 }
 
-$sql = "INSERT INTO `UserHistory`(`User`, `Event`, `Choice`) VALUES ('$user','$name','$choice')";
+$sql = "INSERT INTO `UserHistory`(`User`, `Event`, `Image` ,`Choice`) VALUES ('$user','$name','$image','$choice')";
 mysqli_query($con,$sql);
 
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-function getyelp2($latitude,$longitude,$category){
+function getyelp2($latitude,$longitude,$category,$radius){
 //
 // From http://non-diligent.com/articles/yelp-apiv2-php-example/
 //
@@ -14,7 +14,7 @@ require_once ('lib/OAuth.php');
 //$unsigned_url = "http://api.yelp.com/v2/business/the-waterboy-sacramento";
 
 // For examaple, search for 'tacos' in 'sf'
-$unsigned_url = "http://api.yelp.com/v2/search?sort=2&offset=20&radius_filter=2500&" . $category . "ll=" . $latitude . "," . $longitude . "";
+$unsigned_url = "http://api.yelp.com/v2/search?sort=2&offset=20&radius_filter=" . $radius . "&" . $category . "ll=" . $latitude . "," . $longitude . "";
 
 
 // Set your keys here
