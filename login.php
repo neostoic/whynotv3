@@ -29,6 +29,8 @@ $sql = "INSERT INTO Users (User, Latitude, Longitude, Category, LookingIn) value
 mysqli_query($con,$sql);
 
 switch($place) {
+	case "Near Me":
+	break;
 	case "Abbey Road":
 	$_SESSION['lat']= 51.531951985733; 
 	$_SESSION['long']=0.0037377856069111; 
@@ -393,7 +395,7 @@ case "Edgware Road (Bakerloo)":
 $_SESSION['lat']= 51.520645381678;
  $_SESSION['long']=-0.17052514070378;
  break;
-case "Edgware Road (Circle/District/Hammersmith and City)":
+case "Edgware Road":
 $_SESSION['lat']= 51.51999806318;
  $_SESSION['long']=-0.1676538436008;
  break;
