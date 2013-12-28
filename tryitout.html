@@ -35,21 +35,30 @@
   <div id='overlay' class='vert-text'><center><img src='overlay.png' class='img-responsive'></center>
   </div>
 
-    <!-- Side Menu -->
+ <!-- Side Menu -->
     <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-bars"></i></a>
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
         <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-        <li class="sidebar-brand"><a href="http://www.whynotapp.co.uk/index.html">whynot</a></li>
         <li><a href="www.whynotapp.co.uk/index.html#top">Home</a></li>
-        <li><a href="#about">Try It Out</a></li>
+        <li><a href="whynotapp.co.uk/tryitout.html">Try It Out</a></li>
         <li><a href="/likes.html">Likes</a></li>
         <li><a href="/pins.html">Pins</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="www.whynotapp.co.uk/blog.html">Blog</a></li>
+        <li><a href="www.whynotapp.co.uk/contact.html">Contact</a></li>
+        <li><button class="btn btn-mini btn-facebook"><i class="fa fa-facebook"></i></button> 
+        <button class="btn btn-mini btn-twitter"><i class="fa fa-twitter"></i></button>
+        <button class="btn btn-mini btn-instagram"><i class="fa fa-instagram"></i></button>
+        </li>
+        <li>
+        <button class="btn btn-mini btn-tumblr"><i class="fa fa-tumblr"></i></button>
+        <button class="btn btn-mini btn-youtube"><i class="fa fa-youtube"></i></button>
+        <button class="btn btn-mini btn-pinterest"><i class="fa fa-pinterest"></i></button>
+        </li>
+        <hr>
       </ul>
     </div>
-        <!-- /Side Menu -->
+    <!-- /Side Menu -->
 
         <!-- Full Page Image Header Area -->
         <div id="top" class="header">
@@ -59,21 +68,26 @@
                 <div class="col-md-7">
                     <img src='' id='image'class="img-thumbnail img-responsive">
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-4">
         <style>
             #desc {
                 background-color:#ecf0f1;
             }
         </style>
         <center><h3 id='desc'></h3></center>
-    <i class="fa fa-star fa-5x"></i>
+    <div id='swipebuttons'>
+    <a href="" class="btn btn-default btn-danger" id='swipeleftbtn_left'>Swipe left (no)</a>
+    <a href="" class="btn btn-default btn-success" id='swiperightbtn_right'>Swipe right (yes)</a>
+  <div>
+        </br>
+    <i class="fa fa-thumb-tack fa-4x"></i>
 </br>
 <style>
     #save {
         color: gray;
     }
 </style>
-<h3 id='save'>Save it!</h3>
+<h3 id='save'>Pin it!</h3>
     </br>
     <div class="eventful-badge eventful-medium">
   <img src="http://api.eventful.com/images/powered/eventful_88x31.gif"
@@ -91,6 +105,8 @@
 </br>
 </br>
 </div>
+<div class="col-md-4">
+</div>
 </div>
 <!-- /Full Page Image Header Area -->
 
@@ -99,27 +115,6 @@
       <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="map.php" id="map"></iframe><br/><small><a href="map.php" id="map"></a></small></iframe>
     </div>
     <!-- /Map -->
-    
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3 text-center">
-            <ul class="list-inline">
-              <li><i class="fa fa-facebook fa-3x"></i></li>
-              <li><i class="fa fa-twitter fa-3x"></i></li>
-              <li><i class="fa fa-dribbble fa-3x"></i></li>
-            </ul>
-            <div class="top-scroll">
-              <a href="#top"><i class="fa fa-circle-arrow-up scroll fa-4x"></i></a>
-            </div>
-            <hr>
-            <p>Copyright &copy; Company 2013</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- /Footer -->
 
 
     <!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->

@@ -20,6 +20,23 @@ $(document).ready(function() {
             $('#image').attr('src',data['image']);
             $( '#map' ).attr( 'src', function ( i, val ) { return val; });
             $('#info').attr('href',data['url']);
+        });
+    });
+
+    $('#swipeleftbtn_left').on("click",function() {
+      $.ajax({
+            type: "POST",
+            url: "addtodb.php",
+            dataType: 'json',
+            data: {'choice': '-1'}
+        });
+        $.getJSON('model.php',function(data) {
+            $('#name').text(data['name']);
+            $('#desc').text(data['desc']);
+            $('#image').attr('src',data['image']);
+            $( '#map' ).attr( 'src', function ( i, val ) { return val; });
+            $('#info').attr('href',data['url']);
+        });
     });
 
     $('body').on('swiperight',function(){
@@ -37,5 +54,20 @@ $(document).ready(function() {
             $('#info').attr('href',data['url']);
         });
     });
-});
+    
+    $('#swiperightbtn_right').on("click",function() {
+    $.ajax({
+            type: "POST",
+            url: "addtodb.php",
+            dataType: 'json',
+            data: {'choice': '-1'}
+        });
+        $.getJSON('model.php',function(data) {
+            $('#name').text(data['name']);
+            $('#desc').text(data['desc']);
+            $('#image').attr('src',data['image']);
+            $( '#map' ).attr( 'src', function ( i, val ) { return val; });
+            $('#info').attr('href',data['url']);
+        });
+    });
 });
